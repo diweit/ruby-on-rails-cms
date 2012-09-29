@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+	<title>Cms</title>
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
+	<body style="background-color:#cccccc;">
+<table><tr><td>
+			<%= @page_title || "  Content Managment System" %>
+			</td></tr><tr><td>
+			 
+			
+			<%= image_tag("ruby1.jpg") %>
+			</div>
+		 </td></tr></table>
+		<div id="columns" >
+			<div id="side" >
+				<div id="comment">
+				<% if @comment %>
+
+					<% if @comment %>
+					<%= render @comment%>
+					<% end %>
+				
+				</div>
+			<%end%>
+		
+			<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#news">News</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#about">About</a></li>
+</ul>
+		</div>	<div id="main" >
+				<%= yield %>
+			</div>
+		</div>
+		
+	</body>
+</html>
+
